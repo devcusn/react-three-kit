@@ -10,7 +10,7 @@ interface TriangularPrismProps {
   color: string;
 }
 
-const TriangularPrisma: React.FC<TriangularPrismProps> = ({
+const TriangularPrism: React.FC<TriangularPrismProps> = ({
   pos,
   geo,
   color,
@@ -53,7 +53,7 @@ const TriangularPrisma: React.FC<TriangularPrismProps> = ({
   ];
 
   return (
-    <mesh position={pos} rotation={[0.1, 0, 0.9]}>
+    <mesh position={pos} rotation={[0, 0, 0]}>
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
@@ -73,4 +73,4 @@ const TriangularPrisma: React.FC<TriangularPrismProps> = ({
   );
 };
 
-export default TriangularPrisma;
+export default TriangularPrism;

@@ -13,7 +13,7 @@ interface TrapezoidalPrismProps {
   color: string;
 }
 
-const TrapezoidalPrisma: React.FC<TrapezoidalPrismProps> = ({
+const TrapezoidalPrism: React.FC<TrapezoidalPrismProps> = ({
   pos,
   geo,
   color,
@@ -83,4 +83,4 @@ const TrapezoidalPrisma: React.FC<TrapezoidalPrismProps> = ({
   );
 };
 
-export default TrapezoidalPrisma;
+export default TrapezoidalPrism;

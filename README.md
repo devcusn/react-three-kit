@@ -4,6 +4,8 @@ A 3D visualization project built with React Three Fiber and React Three Drei.
 
 ![Description of the image](./about/example.png)
 
+![Description of the image](./about/home.png)
+
 ## Tech Stack
 
 - React

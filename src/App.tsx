@@ -1,24 +1,22 @@
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-
+import Cylinder from "./components/shapes/Cylinder";
+import CylinderWall from "./components/shapes/CylinderWall";
+import Cube from "./components/shapes/Cube";
+import Torus from "./components/shapes/Torus";
+import TriangularPrism from "./components/shapes/TriangularPrism";
+import TrapezoidalPrism from "./components/shapes/TrapezodialPrism";
+import ThreeScene from "./components/shapes/SceneProvider";
 import classes from "./style.module.css";
-import Cylinder from "./components/Cylinder";
-import CylinderWall from "./components/CylinderWall";
-import Cube from "./components/Cube";
-import Torus from "./components/Torus";
-import TriangularPrisma from "./components/TriangularPrisma";
-import TrapezoidalPrisma from "./components/Trapezodial";
+import Home3D from "./components/Home";
 
 const App = () => {
   return (
     <div className={classes.app_container}>
-      <Canvas camera={{ position: [30, 20, 20] }}>
-        {/* Shapes */}
+      <ThreeScene>
         <Cylinder radius={2} length={2} color={"orange"} pos={[0, 0, 0]} />
         <CylinderWall pos={[0, 0, 5]} color={"red"} />
         <Cube size={2} color={"blue"} pos={[0, 0, 10]} />
         <Torus position={[0, 0, 15]} />
-        <TriangularPrisma
+        <TriangularPrism
           pos={[0, 0, 20]}
           geo={{
             width: 4,
@@ -27,7 +25,7 @@ const App = () => {
           }}
           color={"orange"}
         />
-        <TrapezoidalPrisma
+        <TrapezoidalPrism
           pos={[0, 0, 25]}
           geo={{
             topWidth: 4,
@@ -37,15 +35,8 @@ const App = () => {
           }}
           color={""}
         />
-        {/* Lights */}
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[5, 5, 5]} />
-        {/* Helpers */}
-        <axesHelper args={[100]} />
-        <gridHelper scale={10} />
-        {/* Controls */}
-        <OrbitControls />
-      </Canvas>
+        <Home3D />
+      </ThreeScene>
     </div>
   );
 };
