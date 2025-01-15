@@ -1,4 +1,3 @@
-import InstancedBoxes from "./InstancedBoxes";
 import Cube from "./shapes/Cube";
 import ReactangularPrism from "./shapes/RectangularPrism";
 import TriangularPrisma from "./shapes/TriangularPrism";
@@ -28,8 +27,6 @@ const Home3D = () => {
       <ReactangularPrism size={[2, 4, 1]} color="brown" pos={[0, 2, 5.5]} />
       <ReactangularPrism size={[2, 2, 1]} color="skyblue" pos={[-3, 7, 5.5]} />
       <ReactangularPrism size={[2, 2, 1]} color="skyblue" pos={[3, 7, 5.5]} />
-
-      <InstancedBoxes />
     </group>
   );
 };

@@ -7,6 +7,8 @@ import TrapezoidalPrism from "./components/shapes/TrapezodialPrism";
 import ThreeScene from "./components/shapes/SceneProvider";
 import classes from "./style.module.css";
 import Home3D from "./components/Home";
+import InstancedBoxes from "./components/InstancedBoxes";
+import AnimationCube from "./components/shapes/AnimationCube";
 
 const App = () => {
   return (
@@ -36,6 +38,8 @@ const App = () => {
           color={""}
         />
         <Home3D />
+        <InstancedBoxes />
+        <AnimationCube size={3} color={"orange"} pos={[0, 10, 0]} />
       </ThreeScene>
     </div>
   );
